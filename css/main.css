@@ -1,0 +1,213 @@
+:root{
+  --dark-color:#19283f;
+  --main-color:#33d1cc;
+  --bg-color:#eff7fa;
+  --yellow:#ffc400;
+}
+
+body{
+font-family: 'Roboto', sans-serif;
+}
+/* Component */
+.main-title p::after{
+    content: "";
+    position: absolute;
+    background: var(--main-color);
+    height: 2px;
+    width: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 42px;
+}
+/* Component */
+/* Start Nav Bar */
+.navbar{
+  background-color: var(--dark-color);
+}
+.nav-link{
+  color: #fff;
+}
+.nav-link.active ,.nav-link:hover,.nav-link:focus{
+  color: var(--main-color);
+}
+
+.navbar .navbar-toggler {
+  color: #fff;
+  box-shadow: none;
+}
+.navbar .navbar-toggler[aria-expanded="true"] {
+  border-color: var(--main-color);
+  box-shadow: none;
+}
+.navbar .search svg {
+  color: var(--main-color);
+  border-left: 1px solid var(--main-color);
+  padding: 5px;
+}
+/* End Nav Bar */
+/* start Labding */
+.landing{
+  background-color: var(--dark-color);
+  min-height: calc(100vh - 86px);;
+}
+/* End Labding */
+/* Start Features */
+.features .feat-box h2{
+  color: var(--yellow);
+}
+.features .feat-box h2{
+  color: var(--yellow);
+}
+.features .icons{
+  height: 200px;
+}
+.features .icons svg{
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+}
+.features .icons .number{
+  font-size: 12rem;
+  color: var(--bg-color);
+}
+.features .icons .icon{
+  font-size: 4rem;
+  color: var(--main-color);
+}
+/* End Features */
+/* Start Our Work */
+.our-work{
+  background-color: var(--bg-color);
+}
+.our-work ul li {
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+}
+.our-work ul li.active{
+  background-color: #ff3150;
+  color: var(--yellow);
+}
+.our-work ul li:hover:not(.active) {
+  color: #ff3150;
+}
+.our-work .row .box {
+    background-color: #fff;
+    padding: 5px;
+    overflow: hidden;
+    position: relative;
+}
+.our-work .box::before {
+  content:attr(data-img);
+  color: #fff;
+  background-color:#33d1cca1;
+  position: absolute;
+  width: calc(100% - 10px);
+  height: calc(100% - 10px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transform: translateX(calc(100% + 5px));
+  -webkit-transform: translateX(calc(100% + 5px));
+  -moz-transform: translateX(calc(100% + 5px));
+  -ms-transform: translateX(calc(100% + 5px));
+  -o-transform: translateX(calc(100% + 5px));
+}
+.our-work .box:hover::before{
+  transform: translateX(0);
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -o-transform: translateX(0);
+}
+/* End Our Work */
+/* Start About Us */
+.about-us .info {
+  width: 500px;
+}
+/* End About Us */
+/* Start Team */
+.team {
+  background-color: var(--bg-color);
+}
+.team  h2 {
+  color: var(--yellow);
+}
+.team .box > h3 {
+  background-color: var(--main-color);
+}
+
+@media(min-width: 992px)and (max-width:1200px){
+.team .box q {
+    display: flex;
+height: 180px;
+}
+}
+/* End Team */
+/* Start Project */
+.project{
+  background-color: var(--dark-color);
+}
+/* End Project */
+/* Start Subscribe */
+.subscribe{
+  background-color: var(--yellow);
+}
+.subscribe div > p {
+  text-wrap: nowrap;
+}
+.subscribe div > input[type="text"]{
+  border: none;
+  border-bottom: 1px solid #fff;
+}
+.subscribe div > input[type="text"]:focus{
+  outline: none;
+}
+.subscribe div > input[type="text"]:focus::placeholder{
+  opacity: 0;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+.subscribe div > input[type="submit"]{
+  background-color: var(--dark-color);
+  color: var(--yellow);
+}
+/* End Subscribe */
+/* Start Footer */
+.footer{
+  background-color: var(--dark-color);
+}
+.footer .info .copyright > span {
+  color:var(--main-color);
+}
+.footer .info .copyright  div  span {
+  color:var(--yellow);
+}
+.footer ul.links > li > a svg{
+  width: 20px;
+  height: 20px;
+}
+.footer ul.links > li.facebook > a svg {
+  background-color: #1877f2;
+}
+.footer ul.links > li.twitter > a svg {
+  background-color:#14171a;
+}
+.footer ul.links > li.linkedin > a svg {
+  background-color:#0a66c2;
+}
+.footer ul.links > li.youtube > a svg {
+  background-color: #ff0000;
+}
+/* End Footer */
